@@ -1,12 +1,5 @@
 <div align="center">
-
   <img src="https://gimgs2.nohat.cc/thumb/f/640/bootstrap-bootstrap-4-logo-png--m2i8m2A0b1K9N4A0.jpg" alt="logo" width="200" height="auto" />
-  <h1>Bootstrap Mock Webpage</h1>
-  
-  <p>
-    My experience with the project! 
-  </p>
-  
   
 # Bootstrap E-Commerce Project
 

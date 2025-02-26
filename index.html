@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>INDEX</title>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<!-- navbar creation -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- making it clickable -->
+        <a href="index.html" class="navbar-brand mb-0 h1">
+            <!-- adding icon and aligning it-->
+            <img class="d-inline-block align-top" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30">
+            Home
+        </a>
+        <!-- making it responsive x1-->
+        <button type="button" data-bs-toggle="collapse" data-bs-target="navbarNav" class="navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- making it responsive x2-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- items in navbar -->
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        Register
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="shopping_cart.html" class="nav-link">
+                        Shopping Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+<!-- Modal Form -->
+  <!-- Login -->
+  <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <label class="form-label">Email</label>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" placeholder="Type in your email" id="email" required>
+                  <label for="email">Type in your email</label>
+                </div>
+                <label class="form-label">Password</label>
+                <div class="form-floating">
+                  <input type="password" class="form-control" placeholder="Type in your password" id="password" required>
+                  <label for="password">Type in your password</label>
+                </div>
+                <br>
+                <br>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+            <h7> No account?</h7>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"> Register now!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="registerForm" novalidate>
+            <!-- Row for First Name & Last Name -->
+            <div class="row mb-3">
+              <div class="col-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="registerFirstName" name="firstName"
+                    placeholder="First Name" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ ]+$" required>
+                  <label for="registerFirstName">First Name</label>
+                  <div class="invalid-feedback">Only letters and spaces allowed.</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="registerLastName" name="lastName"
+                    placeholder="Last Name" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ ]+$" required>
+                  <label for="registerLastName">Last Name</label>
+                  <div class="invalid-feedback">Only letters and spaces allowed.</div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Email Field -->
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="registerEmail" name="email"
+                placeholder="Email" required>
+              <label for="registerEmail">Email</label>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+  
+            <!-- Password Field -->
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="registerPassword" name="password"
+                placeholder="Password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+              <label for="registerPassword">Password</label>
+              <div class="invalid-feedback">
+                Must be at least 6 characters, include an uppercase letter, lowercase letter, and a number.
+              </div>
+            </div>
+            <!-- Confirm Password Field -->
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="registerPassword" name="password"
+                  placeholder="Password"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+                <label for="registerPassword">Confirm Password</label>
+                <div class="invalid-feedback">
+                  Must be at least 6 characters, include an uppercase letter, lowercase letter, and a number.
+                </div>
+              </div>
+  
+            <input type="submit" class="btn btn-primary w-100" value="Register">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h7>Already have an account?</h7>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> Login here!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Validation Script (had help ;p)-->
+  <script>
+    // Bootstrap form validation script
+    (function () {
+      'use strict';
+      var forms = document.querySelectorAll('form');
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+  
+<!-- Carousel (copypasted from Bootstrap docs)-->
+    <div id="carouselExample" class="carousel slide">
+        <!-- Carousel indicators-->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img src="https://i.pinimg.com/736x/e5/67/b6/e567b6fbce10d28e5ac19ef4da784af5.jpg" class="d-block w-100 c-img" alt="...">
+            <div class="carousel-caption top-0 mt-4 d-none d-md-block">
+                <p class="mt-5 fs-5">Some representative placeholder content for the first slide.</p>
+                <h1 class="display-1 fw-bolder text-capitalize">E-Commerce</h1>
+                <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Start Now</button>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkgmLGf4hc4UebKtkHPB6SUVk5wjwop0cuniQZc-EOC-LfSqoq5q-2eYAOIxsRm8epLhA&usqp=CAU" class="d-block w-100 c-img" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="mt-5 fs-5">Some representative placeholder content for the first slide.</p>
+                <h1 class="display-1 fw-bolder text-capitalize">E-Commerce</h1>
+            </div>
+            </div>
+          <div class="carousel-item c-item">
+            <img src="https://i.redd.it/vlxxuumzrtsb1.jpg" class="d-block w-100 c-img" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="mt-5 fs-5">Some representative placeholder content for the first slide.</p>
+                <h1 class="display-1 fw-bolder text-capitalize">E-Commerce</h1>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+<!-- Cards-->
+    <div class="container">
+        <div class="row gy-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://elliquorstore.com/sites/default/files/productos/Miel%20de%20agave%20traficante%20500ml.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Miel de Agave</h5>
+                        <p class="card-text">Made in Mexico, 100% pure and delicious. Keto friendly and weight loss friendly</p>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://mercanto.mx/cdn/shop/files/14722159_1_c96b134b-63ba-4283-acaa-522c07be604b.jpg?v=1738178500" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tabasco Banana</h5>
+                        <p class="card-text">100% pure Mexican banana. Helps prevent heart disease and more!</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/AL/QD/HP/3067591/coffee-powder-500x500.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Kona</h5>
+                        <p class="card-text">Made in Hawaii direct from our award winning organic farm. Premium organic gourmet coffee beans</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<!-- Pagination -->
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+</body>
+</html>

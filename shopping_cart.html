@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>SHOPPING CART</title>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<!-- Navbar copy pasted from index.html-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- making it clickable -->
+            <a href="index.html" class="navbar-brand mb-0 h1">
+                <!-- adding icon and aligning it-->
+                <img class="d-inline-block align-top" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30">
+                Home
+            </a>
+            <!-- making it responsive x1-->
+            <button type="button" data-bs-toggle="collapse" data-bs-target="navbarNav" class="navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- making it responsive x2-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- items in navbar -->
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="shopping_cart.html" class="nav-link">
+                            Shopping Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+    <div class="container mt-5">
+        <h3 class="text-center">In your Cart</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Media Object -->
+                <div class="media border p-3 mb-3">
+                    <img src="https://elliquorstore.com/sites/default/files/productos/Miel%20de%20agave%20traficante%20500ml.jpg" class="mr-3 align-self-center product-img">
+                    <div class="media-body">
+                        <h5>Miel de Agave <button class="btn btn-danger btn-sm float-right">&#128465;</button></h5>
+                        <p>Quantity: <input type="number" value="1" class="form-control d-inline w-25"> <button class="btn btn-info btn-sm">✎</button></p>
+                        <p>Price: $152.00 </p>
+                    </div>
+                </div>
+                <div class="media border p-3">
+                    <img src="https://mercanto.mx/cdn/shop/files/14722159_1_c96b134b-63ba-4283-acaa-522c07be604b.jpg?v=1738178500" class="mr-3 align-self-center product-img">
+                    <div class="media-body">
+                        <h5>Tabasco Banana<button class="btn btn-danger btn-sm float-right">&#128465;</button></h5>
+                        <p>Quantity: <input type="number" value="5" class="form-control d-inline w-25"> <button class="btn btn-info btn-sm">✎</button></p>
+                        <p>Price: $3.60 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border p-3">
+                    <h5>Order Summary</h5>
+                    <p>Miel de Agave: 1 x 152.00</p>
+                    <p>Banana: 5 x 3.60</p>
+                    <p>Shipping: 30.00</p>
+                    <h5>Total: 200.00</h5>
+                    <button class="btn btn-success btn-block">Pay</button>
+                    <button class="btn btn-danger btn-block">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

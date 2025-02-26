@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDERS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <a href="index.html" class="btn btn-primary mb-3">&larr; Back</a>
+        <h2 class="mb-4">My Orders</h2>
+
+        <div class="accordion" id="ordersAccordion">
+            
+            <!-- Pedido 1 -->
+            <div class="card">
+                <div class="card-header" id="orderOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                            Order #12345 - 20 de Febrero, 2025
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#ordersAccordion">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="https://via.placeholder.com/50" class="img-fluid" alt="Miel de Agave"> Miel de Agave
+                                    </td>
+                                    <td>1</td>
+                                    <td>$152.00</td>
+                                    <td>$152.00</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="https://via.placeholder.com/50" class="img-fluid" alt="Plátano de Tabasco"> Plátano de Tabasco
+                                    </td>
+                                    <td>5</td>
+                                    <td>$3.60</td>
+                                    <td>$18.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <strong>Total: $200.00</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pedido 2 -->
+            <div class="card">
+                <div class="card-header" id="orderTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                            Order #67890 - 10 de Febrero, 2025
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#ordersAccordion">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="https://via.placeholder.com/50" class="img-fluid" alt="Café Orgánico"> Café Orgánico
+                                    </td>
+                                    <td>2</td>
+                                    <td>$50.00</td>
+                                    <td>$100.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <strong>Total: $130.00</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

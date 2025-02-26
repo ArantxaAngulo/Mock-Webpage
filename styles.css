@@ -1,0 +1,12 @@
+.c-item{
+    height: 500px;
+}
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+.product-img {
+    max-width: 100px; /* Ajusta este valor según lo necesites */
+    height: auto;
+}
